@@ -43,15 +43,97 @@ In T flip flop, "T" defines the term "Toggle". In SR Flip Flop, we provide only 
 
 
 ## Program:
+```
+Developed By: Mirudhula D
+Register No.: 212221230060
+```
+## SR-Flipflop:
+```
+module exp5a(s,r,clk,q,qbar);
+input s,r,clk;
+output reg q;
+output qbar;
+always@(posedge clk)
+begin
+q=s|((~r)&q);
+end
+assign qbar=~q;
+endmodule
+```
+## D-Flipflop:
+```
+module exp5b(d,clk,q,qbar);
+input d,clk;
+output reg q;
+output qbar;
+always@(posedge clk)
+begin
+q=((~q)&d)|(q&d);
+end
+assign qbar=~q;
+endmodule
+```
+## JK-Flipflop:
+```
+module exp5c(j,k,clk,q,qbar);
+input j,k,clk;
+output reg q;
+output qbar;
+always@(posedge clk)
+begin
+q=((~q)&j)|(q&(~k));
+end
+assign qbar=~q;
+endmodule
+```
 
+## T-Flipflop:
+```
+module exp5d(t,clk,q,qbar);
+input t,clk;
+output reg q;
+output qbar;
+always@(posedge clk)
+begin
+q=((~q)&t)|(q&(~t));
+end
+assign qbar=~q;
+endmodule
+```
 
 ## RTL Schematic:
+## SR Flipfliop:
 
+![image](https://github.com/MIRUDHULA-DHANARAJ/Flipflops/assets/94828147/5367aba5-b569-40f4-8d9e-99c3c1a25244)
 
+## D Flipflop:
 
+![image](https://github.com/MIRUDHULA-DHANARAJ/Flipflops/assets/94828147/0fa9f116-bb76-457b-aa0c-48955659b0f9)
+
+## JK Flipflop:
+
+![image](https://github.com/MIRUDHULA-DHANARAJ/Flipflops/assets/94828147/def524d5-44bd-40e0-b864-5a0b976631fa)
+
+## T Flipflop:
+
+![image](https://github.com/MIRUDHULA-DHANARAJ/Flipflops/assets/94828147/5cf566b7-ca08-4a4b-b340-e18de116fbf9)
 
 ## Timing Diagram:
+## SR Flipflop:
 
+![1N](https://github.com/MIRUDHULA-DHANARAJ/Flipflops/assets/94828147/c29983da-f9fc-4e61-ad36-f4c538730d95)
+
+## D Flipflop:
+
+![2N](https://github.com/MIRUDHULA-DHANARAJ/Flipflops/assets/94828147/e8b2cac2-a4ad-46ac-b211-66cb5177981c)
+
+## JK FLIPFLOP:
+
+![3N](https://github.com/MIRUDHULA-DHANARAJ/Flipflops/assets/94828147/154537a3-f49b-4b1e-957f-0594a343249d)
+
+## T FLIPFLOP:
+
+![4N](https://github.com/MIRUDHULA-DHANARAJ/Flipflops/assets/94828147/98278f10-e0b9-4288-9c8b-f62376818282)
 
 
 ## Result:
